@@ -54,5 +54,13 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
-# require 'simplecov'
-# SimpleCov.start
+require 'simplecov'
+require "coverage"
+module EnableEvalCoverageModePatch
+  def start(*args)
+    *args[0][:eval] = true
+    super(*args)
+  end
+end
+Coverage.singleton_class.prepend(EnableEvalCoverageModePatch)
+SimpleCov.start

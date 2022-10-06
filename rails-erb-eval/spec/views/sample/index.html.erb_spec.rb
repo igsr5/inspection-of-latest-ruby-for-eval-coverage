@@ -2,11 +2,8 @@ require "rails_helper"
 require "coverage"
 
 describe "sample/index.html.erb", type: :view do
-  it "displays all the widgets" do
-    Coverage.start(oneshot_lines: true, eval: true)
-
+  it do
+    @text = "test"
     render template: "sample/index", formats: [:html]
-
-    p Coverage.result
   end
 end

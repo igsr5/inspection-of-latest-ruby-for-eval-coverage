@@ -5,7 +5,7 @@
         "lines": [
           1,
           1,
-          1,
+          0,
           null,
           null
         ]
@@ -15,8 +15,22 @@
           1,
           null
         ]
+      },
+      "/app/rails-erb-eval/app/views/sample/index.html.erb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          1,
+          null,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1664445577
+    "timestamp": 1665017290
   }
 }
